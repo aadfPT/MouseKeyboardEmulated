@@ -1,0 +1,3 @@
+[submodule "references/inputsimulator"]
+	path = references/inputsimulator
+	url = https://github.com/michaelnoonan/inputsimulator.git
