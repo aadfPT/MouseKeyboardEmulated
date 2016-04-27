@@ -11,7 +11,7 @@ namespace MouseKeyboardOutput
     [PluginInfo(
         PluginName = "Mouse & Keyboard Emulated",
         PluginDescription = "Adds support to output mouse and keyboard emulated devices",
-        PluginVersion = "1.0.0.2",
+        PluginVersion = "1.0.0.3",
         PluginID = 58,
         PluginAuthorName = "André Ferreira",
         PluginAuthorEmail = "aadf.pt [at] gmail [dot] com",

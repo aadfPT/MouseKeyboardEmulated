@@ -34,7 +34,7 @@ namespace MouseKeyboardOutput
 
         private void ControlThreads(object sender, NotifyCollectionChangedEventArgs e)
         {
-            if (Global.Mappings.Any(m => DeltasAreInUse(m.SourceChannel) || m.Mappings.Any(DeltasAreInUse)))
+            if (Global.Mappings.Where(m => m?.SourceChannel != null).Any(m => DeltasAreInUse(m.SourceChannel) || m.Mappings.Any(DeltasAreInUse)))
             {
                 if (!MouseDeltasThread.IsAlive)
                 {
@@ -46,7 +46,7 @@ namespace MouseKeyboardOutput
             {
                 if (MouseDeltasThread.IsAlive) MouseDeltasThread.Abort();
             }
-            if (Global.Mappings.Any(m => ScrollsAreInUse(m.SourceChannel) || m.Mappings.Any(ScrollsAreInUse)))
+            if (Global.Mappings.Where(m => m?.SourceChannel != null).Any(m => ScrollsAreInUse(m.SourceChannel) || m.Mappings.Any(ScrollsAreInUse)))
             {
                 if (MouseScrollsThread.IsAlive) return;
                 MouseScrollsThread = new Thread(ScrollsMonitor);
@@ -60,12 +60,14 @@ namespace MouseKeyboardOutput
 
         private bool DeltasAreInUse(DeviceChannel m)
         {
+            if (m == null) return false;
             var channelName = m.ChannelName;
             return m.Parent == this && channelName.StartsWith("Delta");
 
         }
         private bool ScrollsAreInUse(DeviceChannel m)
         {
+            if (m == null) return false;
             var channelName = m.ChannelName;
             return m.Parent == this && channelName.StartsWith("Scroll wheel");
 
