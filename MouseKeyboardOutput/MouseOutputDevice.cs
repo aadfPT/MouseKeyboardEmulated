@@ -5,23 +5,23 @@ namespace MouseKeyboardOutput
 {
     internal class MouseOutputDevice
     {
-        public InputChannelTypes.JoyAxis CursorX { get; set; } = new InputChannelTypes.JoyAxis("CursorX", String.Empty);
+        public JoyAxis CursorX { get; set; } = new JoyAxis("CursorX", DataFlowDirection.Output);
 
-        public InputChannelTypes.JoyAxis CursorY { get; set; } = new InputChannelTypes.JoyAxis("CursorY", String.Empty);
+        public JoyAxis CursorY { get; set; } = new JoyAxis("CursorY", DataFlowDirection.Output);
 
-        public InputChannelTypes.JoyAxis DeltaX { get; set; } = new InputChannelTypes.JoyAxis("DeltaX", String.Empty);
+        public JoyAxis DeltaX { get; set; } = new JoyAxis("DeltaX", DataFlowDirection.Output);
 
-        public InputChannelTypes.JoyAxis DeltaY { get; set; } = new InputChannelTypes.JoyAxis("DeltaY", String.Empty);
+        public JoyAxis DeltaY { get; set; } = new JoyAxis("DeltaY", DataFlowDirection.Output);
 
-        public InputChannelTypes.Button LeftButton { get; set; } = new InputChannelTypes.Button("Left button", String.Empty);
+        public Button LeftButton { get; set; } = new Button("Left button", DataFlowDirection.Output);
 
-        public InputChannelTypes.Button RightButton { get; set; } = new InputChannelTypes.Button("Right button", String.Empty);
-        public InputChannelTypes.Button MiddleButton { get; set; } = new InputChannelTypes.Button("Middle button", String.Empty);
-        public InputChannelTypes.Button FourthButton { get; set; } = new InputChannelTypes.Button("Fourth button", String.Empty);
-        public InputChannelTypes.Button FifthButton { get; set; } = new InputChannelTypes.Button("Fifth button", String.Empty);
-        public InputChannelTypes.Button ScrollUp { get; set; } = new InputChannelTypes.Button("Scroll wheel up", String.Empty);
-        public InputChannelTypes.Button ScrollDown { get; set; } = new InputChannelTypes.Button("Scroll wheel down", String.Empty);
-        public InputChannelTypes.Button ScrollRight { get; set; } = new InputChannelTypes.Button("Scroll wheel right", String.Empty);
-        public InputChannelTypes.Button ScrollLeft { get; set; } = new InputChannelTypes.Button("Scroll wheel left", String.Empty);
+        public Button RightButton { get; set; } = new Button("Right button", DataFlowDirection.Output);
+        public Button MiddleButton { get; set; } = new Button("Middle button", DataFlowDirection.Output);
+        public Button FourthButton { get; set; } = new Button("Fourth button", DataFlowDirection.Output);
+        public Button FifthButton { get; set; } = new Button("Fifth button", DataFlowDirection.Output);
+        public Button ScrollUp { get; set; } = new Button("Scroll wheel up", DataFlowDirection.Output);
+        public Button ScrollDown { get; set; } = new Button("Scroll wheel down", DataFlowDirection.Output);
+        public Button ScrollRight { get; set; } = new Button("Scroll wheel right", DataFlowDirection.Output);
+        public Button ScrollLeft { get; set; } = new Button("Scroll wheel left", DataFlowDirection.Output);
     }
 }

@@ -5,12 +5,12 @@ namespace MouseKeyboardOutput
 {
     internal class KeyboardOutputDevice
     {
-        public InputChannelTypes.Button Ctrl { get; set; } = new InputChannelTypes.Button("Ctrl", String.Empty);
-        public InputChannelTypes.Button Shift { get; set; } = new InputChannelTypes.Button("Shift", String.Empty);
-        public InputChannelTypes.Button Enter { get; set; } = new InputChannelTypes.Button("Enter", String.Empty);
-        public InputChannelTypes.Button Backspace { get; set; } = new InputChannelTypes.Button("Backspace", String.Empty);
-        public InputChannelTypes.Button Esc { get; set; } = new InputChannelTypes.Button("Esc", String.Empty);
-        public InputChannelTypes.Button AltEnter { get; set; } = new InputChannelTypes.Button("Alt & Enter", String.Empty);
-        public InputChannelTypes.Button OnScreenKeyboard { get; set; } = new InputChannelTypes.Button("Show/Hide On-Screen Keyboard", String.Empty);
+        public Button Ctrl { get; set; } = new Button("Ctrl", DataFlowDirection.Output);
+        public Button Shift { get; set; } = new Button("Shift", DataFlowDirection.Output);
+        public Button Enter { get; set; } = new Button("Enter", DataFlowDirection.Output);
+        public Button Backspace { get; set; } = new Button("Backspace", DataFlowDirection.Output);
+        public Button Esc { get; set; } = new Button("Esc", DataFlowDirection.Output);
+        public Button AltEnter { get; set; } = new Button("Alt & Enter", DataFlowDirection.Output);
+        public Button OnScreenKeyboard { get; set; } = new Button("Show/Hide On-Screen Keyboard", DataFlowDirection.Output);
     }
 }

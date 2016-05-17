@@ -32,6 +32,7 @@ namespace MouseKeyboardOutput
             Global.Mappings.CollectionChanged += ControlThreads;
         }
 
+
         private void ControlThreads(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (Global.Mappings.Where(m => m?.SourceChannel != null).Any(m => DeltasAreInUse(m.SourceChannel) || m.Mappings.Any(DeltasAreInUse)))
@@ -260,26 +261,26 @@ namespace MouseKeyboardOutput
 
         private void AddInputChannels()
         {
-            InputChannels.Add(MouseWrapper.CursorX);
-            InputChannels.Add(MouseWrapper.CursorY);
-            InputChannels.Add(MouseWrapper.DeltaX);
-            InputChannels.Add(MouseWrapper.DeltaY);
-            InputChannels.Add(MouseWrapper.LeftButton);
-            InputChannels.Add(MouseWrapper.RightButton);
-            InputChannels.Add(MouseWrapper.MiddleButton);
-            InputChannels.Add(MouseWrapper.FourthButton);
-            InputChannels.Add(MouseWrapper.FifthButton);
-            InputChannels.Add(MouseWrapper.ScrollDown);
-            InputChannels.Add(MouseWrapper.ScrollUp);
-            InputChannels.Add(MouseWrapper.ScrollRight);
-            InputChannels.Add(MouseWrapper.ScrollLeft);
-            InputChannels.Add(KeyboardWrapper.Ctrl);
-            InputChannels.Add(KeyboardWrapper.Shift);
-            InputChannels.Add(KeyboardWrapper.Enter);
-            InputChannels.Add(KeyboardWrapper.Backspace);
-            InputChannels.Add(KeyboardWrapper.Esc);
-            InputChannels.Add(KeyboardWrapper.AltEnter);
-            InputChannels.Add(KeyboardWrapper.OnScreenKeyboard);
+            Channels.Add(MouseWrapper.CursorX);
+            Channels.Add(MouseWrapper.CursorY);
+            Channels.Add(MouseWrapper.DeltaX);
+            Channels.Add(MouseWrapper.DeltaY);
+            Channels.Add(MouseWrapper.LeftButton);
+            Channels.Add(MouseWrapper.RightButton);
+            Channels.Add(MouseWrapper.MiddleButton);
+            Channels.Add(MouseWrapper.FourthButton);
+            Channels.Add(MouseWrapper.FifthButton);
+            Channels.Add(MouseWrapper.ScrollDown);
+            Channels.Add(MouseWrapper.ScrollUp);
+            Channels.Add(MouseWrapper.ScrollRight);
+            Channels.Add(MouseWrapper.ScrollLeft);
+            Channels.Add(KeyboardWrapper.Ctrl);
+            Channels.Add(KeyboardWrapper.Shift);
+            Channels.Add(KeyboardWrapper.Enter);
+            Channels.Add(KeyboardWrapper.Backspace);
+            Channels.Add(KeyboardWrapper.Esc);
+            Channels.Add(KeyboardWrapper.AltEnter);
+            Channels.Add(KeyboardWrapper.OnScreenKeyboard);
         }
         protected override void Dispose(bool disposing)
         {
